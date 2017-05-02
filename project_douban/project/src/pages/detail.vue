@@ -87,7 +87,9 @@
             <p>演员</p>
             <div class="author" v-for='author in detail.casts'>
                 <img :src='author.avatars.large'>
-                <p class="author-name">{{author.name}}</p>
+                <div class="asd">
+                    <p class="author-name">{{author.name}}</p>
+                </div>
             </div>
             <div class="cleanfix"></div>
         </div>
@@ -250,5 +252,11 @@ export default {
     .star .star-full {
         background-image: url('../../static/img/star_full.png');
         background-size: 2.1rem 2.1rem;
+    }
+    .author .asd {
+        width: 10rem;
+        overflow: hidden; 
+        white-space: nowrap; 
+        text-overflow: ellipsis;
     }
 </style>

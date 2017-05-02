@@ -30,7 +30,9 @@
                         </div>
                         <div class="info-content">
                             <p class="fl">主演</p>
-                            <p class="info-text" v-for='author in item.casts'>/{{author.name}}</p>
+                            <div class="asd">
+                                <p class="info-text" v-for='author in item.casts'>/{{author.name}}</p>
+                            </div>
                         </div>
                     </div>
                 </div></router-link>
@@ -163,5 +165,12 @@ export default {
         background-image: none;
         color:#FFA500;
         font-family: "Microsoft Yahei", Arial;
+    }
+    .asd {
+        width: 10rem;
+        height: 1rem;
+        overflow: hidden; 
+        white-space: nowrap; 
+        text-overflow: ellipsis;
     }
 </style>
